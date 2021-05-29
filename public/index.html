@@ -1,0 +1,345 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script data-ad-client="ca-pub-9973826062297839" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title>Tiny bank 💰</title>
+    <meta property="og:description" content="Learn about the basic concepts behind bitcoin and crypto currencies."/>
+    <meta property="og:url"content="https://tinybank.dev/" />
+    <meta property="og:title" content="Tiny bank 💰" />
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+      }
+  
+      th, td {
+        text-align: left;
+        padding: 10px;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+			  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZh3w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">Tiny Bank 💰</h1>
+
+      <p class="lead">Anyone looking to buy crypto currency should know what it is. This page explains the basic concepts behind digital currencies such as Bitcoin using an example where you are the owner of an imaginary bank called <em>Gull & Bull</em> 🏦.</p>
+
+      <h3>Chapter 1 - Ledgers</h3>
+
+      <p>Assume you have 3 clients in this bank: <b>Dane, Shiba</b> and <b>Sheltie</b>.</p>
+      <p>You start by creating a ledger with all of the transactions that are being made. It starts by looking something like this.</p>
+      <br/>
+      <table class="table table-striped">
+        <tr>
+          <th>Ledger</th>
+        </tr>
+        <tr>
+          <td>Dane pays Shiba $10</td>
+        </tr>
+        <tr>
+          <td>Shiba pays you $15</td>
+        </tr>
+        <tr>
+          <td>Sheltie pay Dane $5</td>
+        </tr>
+      </table>
+      <br/>
+      <p>You don't have enough money to hire staff so instead you make the ledger public 🌍 and very politely ask your clients to add these transactions themselves, and not to cheat! 🤞</p>
+      <p>This works well, but you have some concerns about security. What's stopping someone from transferring money that's not theirs? They could just go to this public ledger and create ficticious entries.</p>
+
+      <h3>Chapter 2 - Signatures</h3>
+
+      <p>You cleverly devise a way to stop bad guys from abusing the system. Your solution is to ask everyone to <b>sign</b> their own transactions 🖊.</p>
+      <br/>
+      <table class="table table-striped">
+        <tr>
+          <th>Ledger</th>
+        </tr>
+        <tr>
+          <td>Dane pays Shiba $10 - <b><i>signed by Dane</i></b></td>
+        </tr>
+        <tr>
+          <td>Shiba pays you $15 - <b><i>signed by Shiba</i></b></td>
+        </tr>
+        <tr>
+          <td>Sheltie pay Dane $5 - <b><i>signed by Sheltie</i></b></td>
+        </tr>
+      </table>
+      <br/>
+      <p>Great work! You pat yourself on the back for coming up with such a clever idea... but then you quickly realize that anyone can <b>copy</b> the signatures 😱!!</p>
+
+      <h4>Chapter 2b - Signatures (but digital ones)</h3>
+
+      <p>You try again, but this time using <b>digital signatures</b>.</p>
+      <p>In order to create a signature you need two things: a private key 🔐 that only you know, and a public key that you can share with the world 🔑.</p>
+      <p>Unlike pen and paper, the act of signing a document digitally will create different signatures. Using a different key or modifying the message, completely alters what the signature should look like. This means that you can't just copy someone else's signature and use it to forge it on something they didn't sign.</p>
+      <p>This is because of how <a href="crypto">public key cryptography</a> works.</p>
+      <p>Using signatures, you can now make sure that the each transaction was signed by the person who made it (assuming they didn't lose their private keys).</p>
+
+      <h3>Chapter 3 - Managing Debt</h3>
+
+      <p>This is great! Your bank is starting to shape up 🏃‍♂️! But there's still some snags left. One of them is how to manage debt.</p>
+      <p>What stops Dane from sending someone else unlimited money? 💸 💸 💸</p>
+      <p>Easy! You decided you don't accept overspending. This is easy to do because in crypto currencies the ledger <b>is</b> the currency. In order to determine the balance of an account, you tally up all their transactions and if they try to spend more than what they have you reject the transaction ⛔.</p>
+      <p>Let's look at the following example:</p>
+      <br/>
+      <table class="table table-striped">
+        <tr>
+          <th>Ledger</th>
+        </tr>
+        <tr>
+          <td>Dane pays Shiba $15</td>
+        </tr>
+        <tr>
+          <td>Shiba pays Sheltie $5</td>
+        </tr>
+        <tr>
+          <td>Sheltie pays Shiba $10</td>
+        </tr>
+        <tr>
+          <td><p style="color:rgb(255, 30, 30);">Shiba pays Dane $500</p></td>
+        </tr>
+      </table>
+      <br/>
+      <p>Looking at this ledger, we know that Shiba only has $20 (they received $15 + $10 and used $5) so we don't accept that last entry because we know there is not enough money in the account.</p>
+
+      <h3>Chapter 4 - New Clients</h4>
+      <p>Your clients are super happy with your tiny bank! But as happy as they are, the number of clients doesn't seem to be growing 🙁.</p>
+      <p>You realize that this is because there is a disconnect between the money in your ledger and the money in the real world and that there is no way for new clients to transfer funds into your bank.</p>
+      <p>To solve this you ask a third party to build something called an exchange that enable new clients to join your bank by exchanging real fiat money with digital currency.</p>
+      <p>You may have heard of some of these exchanges in the real world such as Coinbase or Binance.</p>
+      <p>For example, a new client <b>Spitz</b> wants to join your bank to start using your digital currency.</p>
+      <p>To do that, Spitz uses this exchange to send Shiba (who's already a customer) $10 in real money, and in return Shiba agrees to add a new entry to the ledger with a $10 payment to Spitz.</p>
+      <br/>
+      <table class="table table-striped">
+        <tr>
+          <th>Ledger</th>
+        </tr>
+        <tr>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>Shiba pays Spitz $10</td>
+        </tr>
+      </table>
+      <br/>
+      <p>From this moment on <b>Spitz</b> is now a client of your bank with a balance of $10. And the number of clients of your bank starts to grow 📈!</p>
+      <br/>
+
+      <h3>Chapter 5 - Trust</h4>
+
+      <p>Now, so far we've been talking about a public ledger that everyone can update and that lives in a location that you, as the bank owner, controls 👮.</p>
+      <p>However some of your clients don't trust you and would prefer to have a copy of the ledger themselves.</p>
+      <p>To solve this, you move to a decentralized model where everyone keeps a copy, and when someone wants to pay someone, they simply add that entry to their own copy of the ledger and broadcast 📫 it to everyone. This way everyone knows that a payment has been made.</p>
+      <p>This has a tiny problem though. We can now have multiple versions of the ledger and they may not be in agreement. This also creates the opportunity for fraud.</p>
+      <p>For example, I can add a transaction saying that I paid Shiba $100 and broadcast that <b>just to Shiba</b> and no one else.</p>
+      <p>Who should the other clients believe in? Shiba's copy of the ledger contains this transaction, but mine doesn't.</p>
+      <p>Hmmmm...</p>
+
+      <h4>Blocks (and proof of work)!</h4>
+
+      <p>You decide that the solution for this is to trust whichever copy of the ledger has the most <b>work</b> put into it.</p>
+      <p>You're not really sure what this means just yet, but it sounds smart so you decide to explore this further! 🔭</p>
+      <p>Every problem is easier to solve if you break it down into smaller pieces, so you start by breaking down your ledger into "blocks", where each block contains just a few transactions.</p>
+      <table class="table table-striped">
+        <tr>
+          <th>Block 1</th>
+        </tr>
+        <tr>
+          <td>Dane pays Shiba $15</td>
+        </tr>
+        <tr>
+          <td>You pay Shiba $10</td>
+        </tr>
+      </table>
+      <br/>
+      <table class="table table-striped">
+        <tr>
+          <th>Block 2</th>
+        </tr>
+        <tr>
+          <td>Shiba pays You $15</td>
+        </tr>
+        <tr>
+          <td>Shiba pays Spitz $5</td>
+        </tr>
+      </table>
+      <br/>
+      <p>To make this splitting safer you decide to use a <b>"hash"</b> to validate the integrity of each block. This is basically a special number that guarantees that the contents of the block are valid and have not been altered.</p>
+      <p>At this point you have no idea of what a "hash" actually is so you do some reading and create the world's most basic hashing function.</p>
+      <p>A hashing function is a mathematical equation that processes an input, typically a text, and produces an output that looks random. This output is usually called the "hash" and this function can be represented like this: <i>hash("input") = output</i></p>
+      <p>A simple hash function could be one that simply replaces a letter with a number, where A = 1, B = 2, C = 3, ... and multiplies them at the end.</p>
+      <p>For example, <i>hash("coin")</i> is <i>3 * 15 * 9 * 14 = 5670</i>.</p>
+      <p>You feel super proud until you realize that there's more security holes in your algorithm than there are atoms in the universe. For starters, reversing the text doesn't seem to make any difference to the resulting hash. <i>hash("coin")</i> and <i>hash("nioc")</i> return the same result.</p>
+      <p>You start wondering how to improve it but at the end you give up and decide to use an algorithm created by people who are more intelligent than you, and you end up picking <a href="https://en.wikipedia.org/wiki/SHA-2" target="_blank">SHA-256</a> .</p>
+      <p>The end result is similar. Hashing some text will result in a random number. In this case with zeros and ones. <i>hash("<b>pizzas</b>") = <b>[01001010010101110110]</b></i>. And changing the input of the message, even if slightly, will result in a completely different hash.</p>
+      <p>Similarly to digital signatures, it's infeasible to try to reverse the result of this function. If you wanted to obtain the input text that generates a hash that looks exactly like <i><b>[01001010010101110110]</b></i> you would have no other way than to try millions of combinations of characters.</p>
+      <p><i>hash("potato") = [01001010010110110]</i> ❌<br/>
+      <i>hash("tomato") = [11111010010101101]</i> ❌<br/>
+      <i>hash("planet") = [00010010001110]</i> ❌<br/>
+      <br/>
+      <i>many attempts later...</i><br/>
+      <br/>
+      <i>hash("<b>pizzas</b>") = <b>[01001010010101110110]</b></i> ✅</p>
+      <p>If we apply this hashing function to our blocks, each block will have a different hash that depends on its content.</p>
+      <p>Cool! Now how can we use these hashes to associate work 🏋 to a block?</p>
+      <p>Hmmm. Imagine you have the following block.</p>
+      <br/>
+      <table class="table table-striped">
+        <tr>
+          <th>Block 567</th>
+        </tr>
+        <tr>
+          <td>Dane pays Shiba $15</td>
+        </tr>
+        <tr>
+          <td>Shiba pays you $5</td>
+        </tr>
+        <tr>
+          <td>You pay Shiba $10</td>
+        </tr>
+        <tr>
+          <td><i>sha256: [0010001110010000000011100101]</i></td>
+        </tr>
+      </table>
+      <br/>
+      <p>And now imagine that someone says "hey, I found a special string <i>927e9dna20289n2a</i> that if I add it to this this block then the first 20 characters of its hash are all zeroes. <i>[0000000000000000000011100101]</i></p>
+      <br/>
+      <table class="table table-striped">
+        <tr>
+          <th>Block 567</th>
+        </tr>
+        <tr>
+          <td>Dane pays Shiba $15</td>
+        </tr>
+        <tr>
+          <td>Shiba pays you $5</td>
+        </tr>
+        <tr>
+          <td>You pay Shiba $10</td>
+        </tr>
+        <tr>
+          <td><p style="color:rgb(3, 99, 23);">Special string: 927e9dna20289n2a</p></td>
+        </tr>
+        <tr>
+          <td><i>sha256: [0000000000000000000011100101]</i></td>
+        </tr>
+      </table>
+      <br/>
+      <p>The probability of someone finding a string randomly where the first 20 digits are zero is 1 in 2^30 which is roughly 1 in a million.</p>
+      <p>This means this person certainly had to go through a <b>huge</b> amount of attempts to find this special string. Interesting 🤔</p>
+      <p>As we've seen before, these operations are only difficult in one direction. It's difficult to find the value for the special string that generates a specific hash, but it's easy to calculate what the value of a hash is.</p>
+      <p>This means that it may be hard to find this special string, but it's very easy to confirm if someone went through a lot of work to find it without having to go through that same effort yourself.</p>
+      <p>We're on to something!</p>
+      <p>You reorganize your ledger into blocks where each block must contain this special string. Since this string is hard to find, you decide to call if <b>Proof of work</b>.</p>
+      <p>And you also include in every block the hash of the <b>previous</b> block, thereby linking them.</p>
+      <br/>
+
+      <p style="text-align:center;">⬇</p>
+
+      <table class="table table-striped">
+        <tr>
+          <th>Block 567</th>
+        </tr>
+        <tr>
+          <td><p style="color:rgb(17, 7, 146);"><i>&lt;Previous Hash&gt;</i></p></td>
+        </tr>
+        <tr>
+          <td>You pay Shiba $15</td>
+        </tr>
+        <tr>
+          <td>Dane pays Shiba $5</td>
+        </tr>
+        <tr>
+          <td>You pay Shiba $10</td>
+        </tr>
+        <tr>
+          <td><i>sha256: [0000000000000001101010]</i></td>
+        </tr>
+        <tr>
+          <td><p style="color:rgb(3, 99, 23);">Proof of work: 82659a2977a2</p></td>
+        </tr>
+      </table>
+
+      <p style="text-align:center;">⬇</p>
+        
+      <table class="table table-striped">
+        <tr>
+          <th>Block 568</th>
+        </tr>
+        <tr>
+          <td><p style="color:rgb(17, 7, 146);"><i>&lt;Previous Hash>&gt;</i></p></td>
+        </tr>
+        <tr>
+          <td>Dane pays Dane $15</td>
+        </tr>
+        <tr>
+          <td>Shiba pays you $5</td>
+        </tr>
+        <tr>
+          <td>You pay Shiba $10</td>
+        </tr>
+        <tr>
+          <td><i>sha256: [00000000000000011110101]</i></td>
+        </tr>
+        <tr>
+          <td><p style="color:rgb(3, 99, 23);">Proof of work: 928aac01fe</p></td>
+        </tr>
+      </table>
+
+      <p style="text-align:center;">⬇</p>
+
+      <br/>
+      <p>This means that it's nearly impossible to modify or delete blocks. To do that you would have to redo all of the work to find that new special string, not just for the block you alter but also for <b>all</b> of the blocks after that one.</p>
+      <p>You realise that since blocks are now chained together you should rename your ledger to <b>blockchain</b> 🚃.</p>
+
+      <h4>Forks and 51%!</h3>
+
+      <p>Uh-oh! After all this there's still people trying to abuse the system 🤬.</p>
+      <p>You notice that someone is trying to fool Shiba again!</p>
+      <p>They find the magic string that allows them to create a new block that includes a payment of $100 and send it to Shiba, but don't send it block to anyone else 🤫.</p>
+      <p>We've seen this problem before, but we should now have a solution for this with the blocks, right?</p>
+      <p>And the solution is to always trust the chain with the most amount of work put into it, aka, to trust the <b>longest</b> chain.</p>
+      <p>For someone to keep up with this farce they would need to keep creating blocks faster than everyone else. With some luck this can keep this going for a block or two, but it's very unlikely that this can be sustained over time. They would need more than 50% of the computing power to find the special strings faster than the rest of the users and for their fork of the chain to continue to be the longest one.</p>
+      <p>So that's what you tell your clients: Always trust the longest chain, as it's the one with the highest amount of work, and always wait for a few blocks before assuming the transaction are valid.</p>
+
+      <h3>Chapter 6 - Miners</h3>
+
+      <p>But who pays for all of these expensive computations? Your clients want to use the bank, they don't want to maintain it! Surely they have better things to do with their computers!</p>
+      <p>You have a great idea! Miners! ⛏️</p>
+      <p>You start recruiting people that listen to the transactions that are being being broadcasted and then do the work to find that special string. Once they do it, they broadcast the block they "mined".</p>
+      <p>To reward your miners, they are allowed to add a small transaction to each block that they mine, in which they can create $ out of thin air 🎩.</p>
+      <p>This is also how currency is created and how the total number of coins increases.</p>
+      <p>From a miners point of view, each block is a mini lottery where they all compete against each other to be the first one to find that special string and get the reward 🎰!</p>
+      <p>You also decide that new blocks should be created every 10 minutes in order to control the creation of new coins, and you do this by adjusting the difficulty of finding the "special string" that we mentioned before. This is done by adjusting the number of zeros of the hash must start with: 20, or 30, or ... (the higher, the more difficult).</p>
+      <p>You also decide that the reward for miners decreases over time as well as the number of coins created. This doesn't mean they will stop making money. In addition to block rewards, they can also collect transaction fees.</p>
+      <p>The size of blocks is limited (you can only include ~2000 transactions in each block) which means that transactions are slow, so your clients can include a small fee that goes to the miner that processes that block. This creates an incentive for your transaction to be included in the next block.</p>
+      <br/>
+      <p>Finally, you name your currency <b>Bitcoin</b>.</p>
+      <br/>
+      <!--p>I hope this explanation made sense. My personal view is that Bitcoin is a <a href="scam">con</a>. Feel free to disagree.</p-->
+
+      <br/>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

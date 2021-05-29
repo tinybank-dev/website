@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script data-ad-client="ca-pub-9973826062297839" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <title>Public key crypto algorithm 🔑</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script
+                  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+                  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+                  crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+      </head>
+  <head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">Public key crypto algorithms 🔑</h1>
+            <p class="lead">Hello curious 👋</p>
+    <h3>Ready to learn about cryptography?</h3>
+    <p>Cryptographic algorithms depend on the fact that prime factorization of large numbers takes a very very very long time 🐌 to calculate.</p>
+    <p>Let's look at how one of the most popular algorithms works. RSA.</p>
+    <br/>
+    <p>You start by picking two prime numbers. A prime number is a number that is only divisible by itself.</p>
+    <p>In a real world example you would pick larger number but for the sake of keeping this simple we're going to use small ones.</p>
+    <p>We pick <i>2</i> and <i>7</i>. Let's call these P and Q.</p>
+    <p>It's easy to calculate the product of these two numbers. <i>2 * 7</i>. You can even do this by hand, and you'll reach the value of <i>14</i>. We'll call this N and we'll use this as part of our public key numbers.</p>
+    <p>But it's harder to do the reverse operation. What are the values of <i>P</i> and <i>Q</i> for when <i>P * Q = 14</i>?</p>
+    <p>This is increasingly difficult as the numbers get longer, and it's difficult for both humans and machines.</p>
+    <p>Before we continue we need to generate another number, L.</p>
+    <p>The rules to create this number tell us to subtract one from P and Q and multiply them. So we take one off 2 and 7 and multiplied we get L = (2 - 1) * (7 - 1) = 6.</p>
+    <p>Now we get to pick the second number (E) for our public key. It has to be between 1 and L (6) and coprime with L (6) and N (14).</p>
+    <p>There's only one possible option, 5, so we pick that one and we have our public key of N 14 and E 5 that we can use to encrypt messages.</p>
+    <p>To decrypt messages, we need yet one other number, D.</p>
+    <p>D has to follow one rule, which is D * E modulus the length of the non common factor has to be 1.</p>
+    <p>Sounds complicated and it is. D (?) * E (5) mod( (P (2) - 1) (Q (7) - 1) ) = 1</p>
+    <p>So... D (?) * (5) mod( 1 * 6 ) = 1</p>
+    <p>Solving for D, D = 11 where 11 * 5 % 6 = 1</p>
+    <p>That's it! You have setup your encryption system! Let's send our message 📫!</p>
+    <br/>
+    <p>Let's recap the numbers we have for our keys.</p>
+    <p>E (5) and N (14) for the public key, and D (11) and N (14) for the private key.</p>
+    <br/>
+    <p>Imagine you want to tell someone how much $ you have in your account but you don't want anyone else to know.</p>
+    <p>You grab your balance, which let's assume it's $2 and multiply it by itself E number of times (2 to the power of E).</p>
+    <p>E is 5 so this means 2 * 2 * 2 * 2 * 2 (5 times) which is a really large number 32.</p>
+    <p>We then divide this number by N (14). The result of this is 2 with a remainder of 4.</p>
+    <p>We then send 4 to the person we want to tell our balance. We don't care if someone sees this message because they will not be able to decrypt it.</p>
+    <p>But how does the other person decrypt it? How do they go from this weird 4 back to $2?</p>
+    <p>Well. Easy.</p>
+    <p>We take 4 to the power of D (11) modulus N (14).</p>
+    <p>This means 4 ^ 11 mod(14).</p>
+    <p>4 to the power of 11 is 4,194,304. This mod 14 is 2.</p>
+    <br/>
+    <a href="/">Back to homepage</a>
+    <br/>
+    <br/>
+</div>
+</div>
+</div>
+  </body>
+</html>
